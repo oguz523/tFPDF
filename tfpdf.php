@@ -14,6 +14,8 @@
 
 *           Tycho Veltmeijer <tfpdf@tychoveltmeijer.nl> (versions 1.30+)       *
 
+* Contributor: Oguzhan Memisoglu <o.memisoglu@hotmail.com>
+
 * License:  LGPL                                                               *
 
 *******************************************************************************/
@@ -976,7 +978,8 @@ function AddFont($family, $style='', $file='', $uni=false)
 
 		}
 
-		if (!isset($type) ||  !isset($name) || $originalsize != $ttfstat['size']) {
+		if (!isset($type) ||  !isset($name) || $originalsize != $ttfstat['size'] ||
+			!file_exists($ttffile)) {
 
 			$ttffile = $ttffilename;
 
